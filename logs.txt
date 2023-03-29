@@ -1,0 +1,37 @@
+C:\SI_2023_lab1_213003>git log
+commit 961b0050b6e72005bb578279740bfa9b733a1200 (HEAD -> master, origin/master, origin/bug3, bug3)
+Author: Renata Peeva <renatapeeva4@gmail.com>
+Date:   Wed Mar 29 23:15:28 2023 +0200
+
+    Fix method sumEvenNumbers
+
+commit 343b2d954be88f8d2deeb141386637dc696b5880
+Merge: 344fed4 b55c3cf
+Author: Renata Peeva <renatapeeva4@gmail.com>
+Date:   Wed Mar 29 23:23:55 2023 +0200
+
+    Merge branch 'bug2'
+
+commit b55c3cf48a6dca9b8276c6a65e4add3d141bc257 (origin/bug2, bug2)
+Author: Renata Peeva <renatapeeva4@gmail.com>
+Date:   Wed Mar 29 23:14:49 2023 +0200
+
+    Fix wrong condition in filterOddNumbers
+
+commit 344fed41bad11a39b038e45e14a5aab321550453 (origin/bug1, bug1)
+Author: Renata Peeva <renatapeeva4@gmail.com>
+Date:   Wed Mar 29 23:13:37 2023 +0200
+
+    Fix wrong loop for reading
+
+commit 3e3d1392b75283a4f033316328be9a919d5ff592
+Author: Renata Peeva <renatapeeva4@gmail.com>
+Date:   Wed Mar 29 23:11:24 2023 +0200
+
+    Add java class
+
+commit 4b6b5b8cbd257928cc0d3cc5e1c769e1e7696879
+Author: Renata Peeva <renatapeeva4@gmail.com>
+Date:   Wed Mar 29 23:10:16 2023 +0200
+
+    Initial commit

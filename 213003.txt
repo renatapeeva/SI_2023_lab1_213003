@@ -1,0 +1,79 @@
+4.mkdir SI_2023_lab1_213003
+cd SI_2023_lab1_213003
+git init - го правиме SI_2023_lab1_213003 да биде локално репо, односно го иницијализираме Git во директориумот (до пред тоа беше обичен директориум)
+
+5.git remote add origin https://github.com/renatapeeva/SI_2023_lab1_213003.git - локалното репо го поврзуваме со оддалечениот репозиториум
+
+6. notepad README.md - се креира датотека, пишувам во неа, зачувувам (датотеката е во состојба untracked)
+git add README.md - ја додаваме датотеката на сцена (датотеката е во состојба unmodified)
+git commit -m "Initial commit" - се прави еден вид на snapshot и ја додаваме како верзија/комит со соодветната порака
+
+7.notepad SILab1.java - креирам фајл, го paste java кодот, зачувувам 
+git add SILab1.java - се додава фајлот на сцена
+git commit -m "Add java class" - се комитнува со соодветна порака
+
+8.git push -u origin master - синхронизирам со оддалечениот репозиториум, ги прикачувам сите локални промени
+Грешка А: грешката е во for циклусот со тоа што треба да се читаат броевите од 0 до n и наместо i<=n, треба да стои i<n
+Грешка Б: во методот filterOddNumbers имаме грешка во if условот, наместо if (el%2 == 0)
+треба да биде if (el % 2 == 1), бидејќи станува збор за непарни броеви
+Грешка Ц: во методот sumEvenNumbers имаме две грешки, најпрво сумата треба да е иницијализирана на 0, а не на 1, и второ елементот треба да се додавам со += а не со *= на сумата
+
+9.git branch bug1
+git branch bug2
+git branch bug3
+
+
+10.git checkout bug1 - се префрлам на гранката bug1
+
+11.notepad SILab1.java - го отварам фајлот (работам со notepad бидејќи nano командата не ми ја дозволува), ја поправам грешката што веќе ја опишав погоре и зачувувам
+git add SILab1.java - го додавам фајлот на сцена
+git commit -m "Fix wrong loop for reading" - правам комит со соодветната порака
+
+12.git checkout bug2 - се префрлам на гранката bug2
+
+13.notepad SILab1.java - го отварам фајлот, ја поправам грешката што веќе ја опишав погоре и зачувувам
+git add SILab1.java - го додавам фајлот на сцена
+git commit -m "Fix wrong condition in filterOddNumbers" - правам комит со соодветната порака
+
+14.git checkout bug3 - се префрлам на гранката bug3
+
+15.notepad SILab1.java - го отварам фајлот, ја поправам грешката што веќе ја опишав погоре и зачувувам
+git add SILab1.java - го додавам фајлот на сцена
+git commit -m "Fix method sumEvenNumbers" - правам комит со соодветната порака
+
+16. Ги синхронизирам сите гранки со оддалечениот репозиториум
+git checkout bug1
+git push origin bug1
+git checkout bug2
+git push origin bug2
+git checkout bug3
+git push origin bug3
+
+17.git checkout master - се префрлувам на master
+
+18.git merge bug1 - bug1 ја спојувам кон master, нема конфликт, FastForward методот е
+
+19.git push --all origin - ги синхронизирам сите гранки и сите промени со оддалечениот репозиториум
+
+20.git merge bug2 - bug2 се спои кон master со ort стратегија (стратегија слична на рекурзивното спојување но нема реименување, брзо и трпеливо се извршува спојувањето и користи diff-merge-algoritham
+
+21.git push --all origin - ги синхронизирам сите гранки и сите промени со оддалечениот репозиториум
+
+22.git checkout bug3 - се префрлам на bug3 гранката
+
+23.git rebase master - правиме rebase кон мастер
+
+24.git checkout master - се префрлам на гранката master
+
+25.git merge bug3 - ја спојуваме bug3 кон master, имаме FForward
+
+26.git push --all origin меѓутоа имаме error: failed to push some refers бидејќи гранката bug3 е позади remote гранката, ги нема сите промени што ги има remote гранката, па затоа користиме git push --all --force origin
+
+27.notepad logs.txt - креираме датотека
+git log - ги копираме сите досегашни git логови и ги ставаме во датотеката
+git add . - се што имаме во моменталниот директориум ставаме на сцена
+notepad 213003.txt - креираме уште еден фајл
+*моментално внатре во него ги пишувам сите команди кои сум ги искористила
+потоа ќе направам git add . за да се додаде и овој фајл на сцена и на крај на овие два фајла ќе им направам еден комит git commit -m "Final commit"
+
+28. git push --all origin за се што сме направиле локално, секакви промени, да се синхронизираат и на гит репото
